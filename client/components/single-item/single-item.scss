@@ -1,0 +1,38 @@
+body {
+  background-color: #e8eef6;
+}
+
+.single-item-container {
+  border: 1px solid $border-gray;
+  margin-bottom: 30px;
+}
+
+.single-item-info {
+  padding: 0;
+  background-color: $w;
+}
+
+.single-item-price {
+  float: left;
+  color: $primary-color;
+}
+
+.product-bottom {
+  position: relative;
+  background-color: $secondary-color;
+  padding: 10px;
+}
+
+.add-basket-btn {
+  position: absolute;
+  right: 10px;
+  background-color: $primary-color;
+  padding: 0 8px 3px;
+  border-radius: 15px;
+  margin-top: -2px;
+
+}
+
+.add-plus {
+  color: $secondary-color;
+}

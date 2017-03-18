@@ -1,0 +1,30 @@
+<header class="hero-unit" id="banner">
+  <div map-lazy-load="http://maps.google.com/maps/api/js" class="getir-map">
+    <map center='current-position' zoom="16">
+      <marker></marker>
+    </map>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3 col-xs-4 category-cont" ng-repeat="category in $ctrl.categories">
+      <a href="/products?category={{category.path}}">
+        <h4 class="hidden-xs category-heading">{{category.name}}</h4>
+        <h5 class="visible-xs category-heading">{{category.name}}</h5>
+        <img ng-src="/assets/images/{{category.img}}" alt="{{category.name}}" class="img-responsive category-img">
+      </a>
+
+    </div>
+  </div>
+
+  <form class="thing-form">
+    <label>Syncs in realtime across clients</label>
+    <p class="input-group">
+      <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="$ctrl.newThing">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" ng-click="$ctrl.addThing()">Add New</button>
+      </span>
+    </p>
+  </form>
+</div>

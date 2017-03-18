@@ -1,0 +1,75 @@
+$primary-color: #5d3ebc;
+$secondary-color: #ffd10d;
+$w: #fff;
+$border-gray: #d2d7e0;
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", "San Francisco", "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: rgb(25, 27, 29);
+  font-size: 15px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.thing-form {
+  margin: 20px 0;
+}
+
+#banner {
+  border-bottom: none;
+  margin-top: -20px;
+}
+
+#banner h1 {
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.hero-unit {
+  position: relative;
+  padding: 30px 15px;
+  color: #F5F5F5;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.getir-map {
+  padding: 0;
+}
+
+.nav {
+  background: $primary-color;
+}
+
+#nav-brand {
+  color: $secondary-color;
+  padding: 0;
+}
+
+.nav-logo {
+  max-height: 50px;
+}
+
+.navbar-text {
+  margin-left: 15px;
+}
+
+.nav-item-color {
+  color: $w !important;
+}
+
+.category-cont {
+  border: 1px solid #dee5eb;
+  padding-right: 0;
+  background-color: $w;
+}
+
+.category-heading {
+  color: #a196d0;
+}
+
+.category-img {
+  float: right;
+}
+
