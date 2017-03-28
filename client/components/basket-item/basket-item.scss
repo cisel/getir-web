@@ -1,0 +1,58 @@
+.basket-img {
+  max-width: 160px;
+  min-width: 120px;
+  width: 37%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.order-heading-wrapper, .order-price-wrapper {
+  position: absolute;
+}
+
+.order-heading-wrapper {
+  top: 28%;
+  left: 25%;
+  width: 30%;
+}
+
+.order-price-wrapper {
+  top: 40%;
+  left: 60%
+}
+
+.order-heading, .order-price {
+  color: $primary-color;
+
+}
+
+.order-heading {
+  font-size: 16px !important;
+}
+
+
+.count-side {
+  position: absolute;
+  right: 0;
+  border: 1px solid #c5cbd5;
+  max-width: 50px;
+}
+
+.count-wrapper, .btn-wrapper {
+  text-align: center;
+  max-width: 48px;
+  right: 0;
+}
+
+.btn-wrapper {
+  background-color: #c5cbd5;
+}
+
+.count-wrapper {
+  background-color: $w;
+}
+
+.count-btn, .count-num {
+  padding-top: 9px;
+}
+

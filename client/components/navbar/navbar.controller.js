@@ -24,6 +24,10 @@ class NavbarController {
     {
       link: '/help',
       title: 'Yardım'
+    },
+    {
+      link: '/basket',
+      title: 'Sepetim'
     }];
   }
 

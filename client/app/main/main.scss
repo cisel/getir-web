@@ -2,6 +2,7 @@ $primary-color: #5d3ebc;
 $secondary-color: #ffd10d;
 $w: #fff;
 $border-gray: #d2d7e0;
+$pr: #29326e;
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", "San Francisco", "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -38,8 +39,8 @@ body {
   padding: 0;
 }
 
-.nav {
-  background: $primary-color;
+.nav-b {
+  background-color: $primary-color;
 }
 
 #nav-brand {

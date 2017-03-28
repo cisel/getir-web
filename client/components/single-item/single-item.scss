@@ -5,6 +5,7 @@ body {
 .single-item-container {
   border: 1px solid $border-gray;
   margin-bottom: 30px;
+  max-width: 270px;
 }
 
 .single-item-info {
@@ -35,4 +36,8 @@ body {
 
 .add-plus {
   color: $secondary-color;
+}
+
+.product-heading {
+  color: $pr;
 }

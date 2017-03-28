@@ -1,7 +1,18 @@
 'use strict';
 
-angular.module('getirApp', ['getirApp.auth', 'getirApp.admin', 'getirApp.constants', 'ngCookies',
-    'ngResource', 'ngSanitize', 'ngRoute', 'btford.socket-io', 'ui.bootstrap', 'validation.match',
+angular.module('getirApp', [
+    'getirApp.auth',
+    'getirApp.admin',
+    'getirApp.constants',
+    'ngCookies',
+    'ngStorage',
+    'ngResource',
+    'ngSanitize',
+    'ngRoute',
+    'btford.socket-io',
+    'ui.bootstrap',
+    'validation.match',
+    'duScroll',
     'ngMap'
   ])
   .config(function($routeProvider, $locationProvider) {

@@ -1,14 +1,16 @@
 <a href="#">
   <div class="row single-item-container">
     <div class="col-xs-12 single-item-info">
-      <img src="/assets/images/{{product.img}}" alt="{{product.name}}" class="img-responsive">
-      <h6 class="text-center">{{product.name}}</h6>
+      <img ng-src="/assets/images/{{product.img}}" alt="{{product.name}}" class="img-responsive">
+      <h6 class="text-center product-heading">{{product.name}}</h6>
     </div>
     <div class="col-xs-12 product-bottom">
       <span class="single-item-price">{{product.price}}</span>
-      <div class="add-basket-btn">
-        <a class="add-plus">+</a>
-      </div>
+      <a href="#" class="add-plus" ng-click="addOrder(product)">
+        <div class="add-basket-btn">
+          <span>+</span>
+        </div>
+      </a>
     </div>
   </div>
 </a>

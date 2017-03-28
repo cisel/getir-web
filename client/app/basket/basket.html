@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+      <h3>Sepetim</h3>
+    </div>
+    <div class="col-xs-6 basket-remove">
+      <a href="#"><span>Sepeti Boşalt</span></a>
+    </div>
+    <div class="col-lg-6 col-md-8 col-xs-12 basket-item-wrapper">
+      <div class="row basket-item" ng-repeat="order in basket track by $index">
+        <basket-item order="order" callback="calcPrice()"></basket-item>
+      </div>
+
+    </div>
+    <div class="col-lg-4 col-lg-offset-2">
+      <h6>Siparis Tutari</h6>
+      <p>{{price | currency: "₺": 2}}</p>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,21 @@
+.subcategory-products {
+  margin-left:0;
+  margin-right: 0px;
+}
+
+#subcategory-heading {
+  color: $pr;
+  margin-bottom: 30px;
+}
+
+#products-general {
+  position: relative;
+  overflow-y: scroll;
+}
+
+.basket-dir {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
