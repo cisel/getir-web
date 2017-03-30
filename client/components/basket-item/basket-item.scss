@@ -1,58 +1,64 @@
 .basket-img {
-  max-width: 160px;
-  min-width: 120px;
-  width: 37%;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.order-heading-wrapper, .order-price-wrapper {
-  position: absolute;
+  width: 88px;
+  padding: 10px 20px 0 0;
 }
 
 .order-heading-wrapper {
-  top: 28%;
-  left: 25%;
-  width: 30%;
-}
-
-.order-price-wrapper {
-  top: 40%;
-  left: 60%
+  padding: 0;
+  position: relative;
 }
 
 .order-heading, .order-price {
   color: $primary-color;
-
+  text-align: left;
+  position: absolute;
 }
 
 .order-heading {
-  font-size: 16px !important;
+  font-size: 14px !important;
+  top: 0px;
 }
 
+.order-price {
+  top: 55px;
+  font-size: 14px;
+}
 
 .count-side {
   position: absolute;
   right: 0;
   border: 1px solid #c5cbd5;
-  max-width: 50px;
-}
-
-.count-wrapper, .btn-wrapper {
-  text-align: center;
-  max-width: 48px;
-  right: 0;
+  width: 37px;
 }
 
 .btn-wrapper {
   background-color: #c5cbd5;
+  padding: 0;
+  text-align: center;
 }
 
 .count-wrapper {
   background-color: $w;
 }
 
-.count-btn, .count-num {
-  padding-top: 9px;
+.count-btn-inc, .count-btn-dec {
+  color: $w;
+}
+
+.count-side a {
+  text-decoration: none !important;
+}
+
+.count-btn-inc {
+  padding-top: 1px;
+}
+
+.count-btn-dec {
+  padding-top: 3px;
+}
+
+.count-num {
+  padding-top: 4px;
+  font-size: 13px;
 }
 

@@ -24,16 +24,11 @@ class NavbarController {
     {
       link: '/help',
       title: 'Yardım'
-    },
-    {
-      link: '/basket',
-      title: 'Sepetim'
-    }];
-  }
-
+    }]
+}
   isActive(route) {
     return route === this.$location.path();
-  }
+  };
 }
 
 angular.module('getirApp')

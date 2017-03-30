@@ -1,20 +1,23 @@
 'use strict';
 
 angular.module('getirApp')
-  .factory('Basket', function($localStorage) {
-    let orders = [];
-    // $localStorage.basket = orders;
-    let basket;
-    let total = 0;
+  .factory('Basket', function($localStorage, $rootScope) {
+    let basket = [];
+    if (!$localStorage.basket) {
+      $localStorage.basket = [];
+    }
 
     const API = {
       add: function (product) {
-        if (orders.indexOf(product) >-1) {
-          product.count += 1;
+        basket = $localStorage.basket;
+        const filtered = _.filter(basket, p => p.id === product.id);
+        if (filtered.length > 0) {
+          filtered[0].count += 1;
         } else {
-          orders.push(product);
+          basket.push(product);
         }
-        $localStorage.basket = orders;
+        $localStorage.basket = basket;
+        $rootScope.$broadcast('add', product);
       },
       get: function () {
         basket = $localStorage.basket;
@@ -22,25 +25,29 @@ angular.module('getirApp')
       },
       increaseCount: function (product) {
         product.count += 1;
-        total = 0;
+        $rootScope.$broadcast('increase', product);
       },
-      decreaseCount: function (product, index) {
+      decreaseCount: function (product) {
         product.count -= 1;
         if (product.count === 0) {
           basket = $localStorage.basket;
-          basket.splice(index, 1);
+          basket.splice(basket.indexOf(product), 1);
           $localStorage.basket = basket;
           product.count = 1;
         }
-        total = 0;
+        $rootScope.$broadcast('decrease', product);
         return basket;
       },
       price: function () {
+        let total = 0;
         _.forEach(basket, function(o) {
           const p = parseFloat(o.price);
           total += (p * o.count);
         });
         return total;
+      },
+      remove: function () {
+        $localStorage.basket = [];
       }
     };
 

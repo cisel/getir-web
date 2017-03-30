@@ -17,5 +17,11 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
+  transition: right 0.4s;
+  z-index: 1060;
+}
+
+.active-basket-dir {
+  right:320px;
 }
 

@@ -26,7 +26,7 @@
           $scope.awesomeThings = response.data;
           $scope.socket.syncUpdates('thing', $scope.awesomeThings);
         });
-    };
+      };
 
       $scope.addThing = () => {
         if ($scope.newThing) {

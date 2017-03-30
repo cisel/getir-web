@@ -6,8 +6,7 @@ angular.module('getirApp')
       templateUrl: 'components/basket-item/basket-item.html',
       restrict: 'E',
       scope: {
-        order: '=',
-        callback: '&'
+        order: '='
       },
       controller: 'BasketItemController'
     };

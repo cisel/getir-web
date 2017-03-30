@@ -1,23 +1,24 @@
 <a href="#">
-  <div class="col-xs-5 basket-img">
-    <img src="/assets/images/{{order.img}}" alt="{{order.name}}" class="img-responsive">
-  </div>
-  <div class="col-xs-4 text-center  order-heading-wrapper">
-    <h6 class="order-heading">{{order.name}}</h6>
-  </div>
-  <div class="col-xs-2 order-price-wrapper">
-    <span class="order-price">{{order.price | currency: "₺": 2}}</span>
-  </div>
-  <div class="col-xs-1 count-side">
-    <div class="row">
-      <div class="col-xs-12 btn-wrapper">
-        <a href="#" ng-click="increaseCount(order)"><p class="count-btn">+</p></a>
-      </div>
-      <div class="col-xs-12 count-wrapper">
-        <p class="count-num">{{order.count}}</p>
-      </div>
-      <div class="col-xs-12 btn-wrapper">
-        <a href="#" ng-click="decreaseCount(order, $index)"><p class="count-btn">-</p></a>
+  <div class="basket-item">
+    <div class="col-xs-5 basket-img">
+      <img ng-src="/assets/images/{{order.img}}" alt="{{order.name}}" class="img-responsive">
+    </div>
+    <div class="col-xs-5 order-heading-wrapper">
+      <h6 class="order-heading">{{order.name}}</h6>
+      {{$index}}
+      <span class="order-price">{{order.price | currency: "₺": 2}}</span>
+    </div>
+    <div class="col-xs-1 count-side">
+      <div class="row">
+        <div class="col-xs-12 btn-wrapper">
+          <a href="#" ng-click="increaseCount(order)"><p class="count-btn-inc">+</p></a>
+        </div>
+        <div class="col-xs-12 count-wrapper">
+          <p class="count-num">{{order.count}}</p>
+        </div>
+        <div class="col-xs-12 btn-wrapper">
+          <a href="#" ng-click="decreaseCount(order)"><p class="count-btn-dec">-</p></a>
+        </div>
       </div>
     </div>
   </div>

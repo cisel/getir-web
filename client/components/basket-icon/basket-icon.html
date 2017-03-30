@@ -1,6 +1,31 @@
-<a href="#">
+<a href="#" ng-click="openBasket()">
   <div class="basket-icon">
     <img src="/assets/images/shopping-bag.png" alt="shopping-bag" class="img-responsive icon-img">
-    <p class="icon-pr">{{basketPrice | currency: "₺": 2}}</p>
+    <p class="icon-pr">{{price | currency: "₺": 2}}</p>
   </div>
 </a>
+
+<div class="container basket">
+  <div class="row">
+    <div class="col-xs-6 basket-heading">
+      <p>Sepetim</p>
+    </div>
+    <div class="col-xs-6 basket-remove">
+      <a href="#" ng-click="removeBasket()"><span>Sepeti Boşalt</span></a>
+    </div>
+    <div class="col-xs-12 basket-inner">
+      <basket-item ng-repeat="order in basket track by $index" order="order"></basket-item>
+    </div>
+    <div class="col-xs-12 bottom-wrapper">
+        <div class="row">
+          <div class="col-xs-8 text-center bottom-btn">
+            <a href="#"><p>Devam Et</p></a>
+          </div>
+          <div class="col-xs-4 text-center bottom-price">
+            <p>{{price | currency: "₺": 2}}</p>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+

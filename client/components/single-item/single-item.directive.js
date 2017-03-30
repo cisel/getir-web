@@ -6,7 +6,8 @@ angular.module('getirApp')
       templateUrl: 'components/single-item/single-item.html',
       restrict: 'E',
       scope: {
-        product: '='
+        product: '=',
+        callback: '&'
       },
       controller: 'SingleItemController'
     };

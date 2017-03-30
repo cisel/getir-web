@@ -5,12 +5,10 @@
 
     $scope.increaseCount = function (obj) {
       Basket.increaseCount(obj);
-      $scope.callback();
     };
 
     $scope.decreaseCount = function (obj, index) {
       Basket.decreaseCount(obj, index);
-      $scope.callback();
     };
 
     $('.btn-wrapper').height($('.basket-item').height() / 3);

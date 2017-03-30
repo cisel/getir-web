@@ -2,8 +2,9 @@
   opacity: 0.95;
   background-color: $primary-color;
   border-radius: 30px;
-  width: 110px;
+  width: 115px;
   height: 50px;
+  text-decoration: none;
 }
 
 .icon-img {
@@ -15,4 +16,90 @@
   font-size: 15px;
   color: $w;
   padding-top: 14px;
+  float: left;
+}
+
+.basket {
+  position: fixed;
+  right: -300px;
+  top: 50px;
+  width: 300px;
+  background-color:#e8eef6;
+  transition: right 0.4s;
+  box-shadow: -4px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.active-basket {
+  right: 0;
+}
+
+.basket-remove, .basket-heading {
+  margin-top: 10px;
+}
+
+.basket-remove a {
+  color: #5c6593;
+  text-decoration: none;
+}
+
+.basket-remove {
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.basket-heading {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #5c6593;
+}
+
+.basket-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #c5cbd5;
+  background-color: white;
+  height: 88px;
+  position: relative;
+}
+
+.basket-inner {
+  width: 300px;
+  overflow-y: scroll;
+}
+
+.bottom-btn, .bottom-price {
+  height: 40px;
+}
+
+.bottom-btn {
+  background-color: $secondary-color;
+  width: 210px;
+  float: left;
+}
+
+.bottom-btn a {
+  color: $primary-color;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.bottom-btn p {
+  margin-top: 10px;
+}
+
+.bottom-price p {
+  margin-top: 10px;
+}
+
+.bottom-price {
+  background-color: $primary-color;
+  width: 90px;
+  color: $w;
+  font-size: 17px;
+}
+
+.bottom-wrapper {
+  position: fixed;
+  bottom: 0;
+  width: 300px;
 }
