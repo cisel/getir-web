@@ -19,7 +19,8 @@
     "angular-validation-match": "~1.5.2",
     "ngmap": "^1.18.4",
     "ngstorage": "^0.3.11",
-    "angular-scroll": "^1.0.0"
+    "angular-scroll": "^1.0.0",
+    "angular-payment": "*"
   },
   "devDependencies": {
     "angular-mocks": "~1.5.0"

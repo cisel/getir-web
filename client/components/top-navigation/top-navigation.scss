@@ -91,12 +91,12 @@
 #affixedPanel.affix {
   position: fixed;
   top: 0px;
-  z-index: 1040 !important;
+  z-index: 1000 !important;
   margin-bottom: 70px !important;
 }
 
 .subcategory-wrapper {
   margin-bottom: 30px;
-  z-index: 1040;
+  z-index: 1000;
   position: relative;
 }

@@ -1,23 +1,28 @@
 'use strict';
 
 angular.module('getirApp')
-  .factory('Basket', function($localStorage, $rootScope) {
+  .factory('Basket', function(Auth, $localStorage, $rootScope) {
     let basket = [];
     if (!$localStorage.basket) {
       $localStorage.basket = [];
+    } else {
+      basket = $localStorage.basket;
     }
 
     const API = {
       add: function (product) {
-        basket = $localStorage.basket;
-        const filtered = _.filter(basket, p => p.id === product.id);
-        if (filtered.length > 0) {
-          filtered[0].count += 1;
+        if (Auth.isLoggedIn()) {
+          const filtered = _.filter(basket, p => p.id === product.id);
+          if (filtered.length > 0) {
+            filtered[0].count += 1;
+          } else {
+            basket.push(product);
+          }
+          $localStorage.basket = basket;
+          $rootScope.$broadcast('add', product);
         } else {
-          basket.push(product);
+          // Notification.danger('Lutfen once adres ekleyin.')
         }
-        $localStorage.basket = basket;
-        $rootScope.$broadcast('add', product);
       },
       get: function () {
         basket = $localStorage.basket;

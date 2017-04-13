@@ -12,6 +12,7 @@ angular.module('getirApp', [
     'btford.socket-io',
     'ui.bootstrap',
     'validation.match',
+    'payment',
     'duScroll',
     'ngMap'
   ])

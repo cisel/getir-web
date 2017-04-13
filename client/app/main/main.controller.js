@@ -1,8 +1,7 @@
 'use strict';
 
   angular.module('getirApp')
-    .controller('MainController', function($http, $scope, socket, Categories, Basket) {
-      $scope.$http = $http;
+    .controller('MainController', function($http, $scope, socket, Categories, $timeout, Auth, Basket, NgMap) {
       $scope.socket = socket;
       // $scope.NgMap = NgMap;
       $scope.awesomeThings = [];
@@ -14,14 +13,13 @@
         socket.unsyncUpdates('thing');
       });
 
-      // NgMap.getMap().then(function(map) {
-      //   console.log(map.getCenter());
-      //   console.log('markers', map.markers);
-      //   console.log('shapes', map.shapes);
-      // });
+      $scope.callbackFunc = function (param) {
+        console.log('I know where '+ param +' are. ' + $scope.message);
+        console.log('You are at' + $scope.map.getCenter());
+      };
 
       $scope.onInit = () => {
-        $scope.$http.get('/api/things')
+        $http.get('/api/things')
         .then(response => {
           $scope.awesomeThings = response.data;
           $scope.socket.syncUpdates('thing', $scope.awesomeThings);
@@ -30,7 +28,7 @@
 
       $scope.addThing = () => {
         if ($scope.newThing) {
-         $scope.$http.post('/api/things', {
+         $http.post('/api/things', {
           name: $scope.newThing
         });
         $scope.newThing = '';
@@ -38,6 +36,15 @@
       };
 
       $scope.deleteThing = (thing) => {
-        $scope.$http.delete('/api/things/' + thing._id);
+        $http.delete('/api/things/' + thing._id);
       };
+
+      $timeout(() => {
+        NgMap.getMap().then(function(map) {
+          console.log(map);
+          $scope.map = map;
+          // console.log($scope.map);
+          $scope.callbackFunc(map);
+        });
+      }, 1500);
     });

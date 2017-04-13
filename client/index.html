@@ -20,7 +20,9 @@
       <!-- injector:css -->
       <!-- endinjector -->
     <!-- endbuild -->
-    <script src="http://maps.google.com/maps/api/js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIysV2udGX2HqgsUfiJFRVroaiuqS4yEA&amp;libraries=places"></script>
+
+    <!-- <script src="http://maps.google.com/maps/api/js"></script> -->
 
   </head>
   <body ng-app="getirApp">
@@ -63,6 +65,7 @@
       <script src="bower_components/ngmap/build/scripts/ng-map.js"></script>
       <script src="bower_components/ngstorage/ngStorage.js"></script>
       <script src="bower_components/angular-scroll/angular-scroll.js"></script>
+      <script src="bower_components/angular-payment/dist/angular-payment-tpls-0.3.0.js"></script>
       <!-- endbower -->
       <script src="socket.io-client/socket.io.js"></script>
     <!-- endbuild -->
@@ -70,7 +73,9 @@
       <script src="app/app.js"></script>
       <!-- injector:js -->
       <script src="app/admin/admin.module.js"></script>
+      <script src="components/Address/Address.module.js"></script>
       <script src="components/Basket/Basket.module.js"></script>
+      <script src="components/Card/Card.module.js"></script>
       <script src="components/Categories/Categories.module.js"></script>
       <script src="components/Products/Products.module.js"></script>
       <script src="components/auth/auth.module.js"></script>
@@ -79,6 +84,8 @@
       <script src="app/account/login/login.controller.js"></script>
       <script src="app/account/settings/settings.controller.js"></script>
       <script src="app/account/signup/signup.controller.js"></script>
+      <script src="app/address/address.controller.js"></script>
+      <script src="app/address/address.js"></script>
       <script src="app/admin/admin.controller.js"></script>
       <script src="app/admin/admin.router.js"></script>
       <script src="app/app.constant.js"></script>
@@ -86,6 +93,8 @@
       <script src="app/help/help.js"></script>
       <script src="app/main/main.controller.js"></script>
       <script src="app/main/main.js"></script>
+      <script src="app/payment/payment.controller.js"></script>
+      <script src="app/payment/payment.js"></script>
       <script src="app/products/products.controller.js"></script>
       <script src="app/products/products.js"></script>
       <script src="app/promotions/promotions.controller.js"></script>
@@ -94,9 +103,15 @@
       <script src="app/settings/settings.js"></script>
       <script src="app/suggest/suggest.controller.js"></script>
       <script src="app/suggest/suggest.js"></script>
+      <script src="components/Address/Address.service.js"></script>
       <script src="components/Basket/Basket.service.js"></script>
+      <script src="components/Card/Card.service.js"></script>
       <script src="components/Categories/Categories.service.js"></script>
       <script src="components/Products/Products.service.js"></script>
+      <script src="components/add-buttons/add-buttons.controller.js"></script>
+      <script src="components/add-buttons/add-buttons.directive.js"></script>
+      <script src="components/address-form/address-form.controller.js"></script>
+      <script src="components/address-form/address-form.directive.js"></script>
       <script src="components/auth/auth.service.js"></script>
       <script src="components/auth/interceptor.service.js"></script>
       <script src="components/auth/router.decorator.js"></script>
@@ -105,6 +120,8 @@
       <script src="components/basket-icon/basket-icon.directive.js"></script>
       <script src="components/basket-item/basket-item.controller.js"></script>
       <script src="components/basket-item/basket-item.directive.js"></script>
+      <script src="components/credit-card-input/credit-card-input.controller.js"></script>
+      <script src="components/credit-card-input/credit-card-input.directive.js"></script>
       <script src="components/footer/footer.directive.js"></script>
       <script src="components/modal/modal.service.js"></script>
       <script src="components/mongoose-error/mongoose-error.directive.js"></script>
@@ -113,6 +130,11 @@
       <script src="components/oauth-buttons/oauth-buttons.controller.js"></script>
       <script src="components/oauth-buttons/oauth-buttons.directive.js"></script>
       <script src="components/product-modal/product-modal.controller.js"></script>
+      <script src="components/product-modal/product-modal.directive.js"></script>
+      <script src="components/single-address/single-address.controller.js"></script>
+      <script src="components/single-address/single-address.directive.js"></script>
+      <script src="components/single-card/single-card.controller.js"></script>
+      <script src="components/single-card/single-card.directive.js"></script>
       <script src="components/single-item/single-item.controller.js"></script>
       <script src="components/single-item/single-item.directive.js"></script>
       <script src="components/socket/socket.service.js"></script>

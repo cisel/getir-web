@@ -13,6 +13,37 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+.dropdown-menu-main {
+  margin-top: -1px !important;
+  padding: 0;
+  background-color: $primary-color;
+}
+
+#navbar-main {
+  background-color: $primary-color;
+  border: none;
+  z-index: 1200;
+}
+
+#affixedNav.affix {
+  position: relative;
+  top: 111px;
+  z-index: 1100 !important;
+  margin-bottom: -52px;
+}
+
+.xs-promotions {
+  float: right;
+  position: relative;
+  right: 60px;
+  bottom: 40px;
+  font-size: 22px;
+}
+
+.larger-promotions, #dropdownMainMenu {
+  font-size: 20px;
+}
+
 .thing-form {
   margin: 20px 0;
 }
@@ -42,6 +73,7 @@ body {
 
 .nav-b {
   background-color: $primary-color;
+  height: 52px;
 }
 
 #nav-brand {

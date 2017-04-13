@@ -17,14 +17,23 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 
 // Component styles are injected through grunt
 /* inject:scss */
+@import 'address/address';
 @import 'admin/admin';
 @import 'main/main';
+@import 'payment/payment';
 @import 'products/products';
+@import 'scss/utils';
+@import '../components/add-buttons/add-buttons';
+@import '../components/address-form/address-form';
 @import '../components/basket-icon/basket-icon';
 @import '../components/basket-item/basket-item';
+@import '../components/credit-card-input/credit-card-input';
 @import '../components/footer/footer';
 @import '../components/modal/modal';
 @import '../components/oauth-buttons/oauth-buttons';
+@import '../components/product-modal/product-modal';
+@import '../components/single-address/single-address';
+@import '../components/single-card/single-card';
 @import '../components/single-item/single-item';
 @import '../components/top-navigation/top-navigation';
 /* endinject */
