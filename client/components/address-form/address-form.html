@@ -1,0 +1,41 @@
+<div class="row adress-form-container">
+  <div class="col-xs-12" ng-show="delete">
+    <a href="#" class="pull-right delete-btn" ng-click="deleteAddress(address)">
+      <span class="fa fa-trash"></span>
+    </a>
+  </div>
+  <div class="col-xs-12 map-container">
+    <ng-map id="map" center='current-position'></ng-map>
+  </div>
+  <div class="col-xs-12">
+    <div class="row">
+      <div class="form-group icon-container col-xs-12">
+        <input class="input-with-icon form-control" type="text" value="inputValue" ng-model="address.name" placeholder="Baslik (Ev, Isyeri)" id="adress-name" ng-disabled="btnClicked">
+        <span class="input-icon fa fa-tag"></span>
+      </div>
+      <div class="form-group icon-container col-xs-12">
+        <input class="input-with-icon form-control" type="text" ng-model="address.desc" placeholder="Adres" id="adress-desc" ng-disabled="btnClicked">
+        <span class="input-icon fa fa-map-marker"></span>
+      </div>
+      <div class="form-group icon-container col-xs-4">
+        <input class="input-with-icon form-control" type="text" ng-model="address.buildingNo" placeholder="Bina No" id="building-no" ng-disabled="btnClicked">
+        <span class="input-icon fa fa-building-o"></span>
+      </div>
+      <div class="form-group icon-container col-xs-4">
+        <input class="form-control input-with-icon" type="text" ng-model="address.apartmentNo" placeholder="Daire" id="apartment-no" ng-disabled="btnClicked">
+        <span class="input-icon fa fa-home"></span>
+      </div>
+      <div class="form-group icon-container col-xs-4">
+        <input class="form-control input-with-icon" type="text" ng-model="address.floor" placeholder="Kat" id="floor-no" ng-disabled="btnClicked">
+        <span class="input-icon fa fa-sort-numeric-desc"></span>
+      </div>
+      <div class="form-group icon-container col-xs-12">
+        <input class="form-control input-with-icon" type="text" ng-model="address.exp" placeholder="Adres Tarifi" id="adress-exp" ng-disabled="btnClicked">
+        <span class="input-icon fa fa-map-signs"></span>
+      </div>
+      <div class="form-group col-xs-12">
+        <button type="submit" class="btn btn-primary form-btn" ng-click="addAddress()" ng-disabled="btnClicked"><span>Kaydet</span>&nbsp;<span class="fa fa-spinner fa-spin btn-spinner" ng-show="btnClicked"></span></button>
+      </div>
+    </div>
+  </div>
+</div>

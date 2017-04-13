@@ -1,0 +1,25 @@
+.single-address-container {
+  height: 96px;
+  overflow: hidden;
+}
+
+.edit-address-container a, .edit-address-container a:hover, .edit-address-container a:active{
+  color: #212b69;
+  text-decoration: none;
+}
+
+.single-address-edit {
+  font-size: 23px;
+  line-height: 44px;
+}
+
+.edit-address-container {
+  height: 44px;
+  border-left: 1px solid $border-gray;
+  margin-top: 10px;
+}
+
+.single-address-desc {
+  height: 50px;
+  overflow: scroll;
+}

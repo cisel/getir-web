@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row" style="margin-top: 100px;" ng-hide="addCardAction">
+    <a href="#" class="col-sm-4 col-xs-12" style="display: block;" ng-click="openCardInputForm()">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-xs-10">
+              <p class="add-buttons-text m0"><span class="fa fa-credit-card"></span>&nbsp;Kart Ekle</p>
+            </div>
+            <div class="col-xs-2">
+              <span>+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="row" ng-show="addCardAction" style="margin-top: 100px;">
+    <credit-card-input show-delete="deleteCardAction" card="card"></credit-card-input>
+  </div>
+  <div class="row" ng-hide="addCardAction">
+    <single-card card="myCard" ng-repeat="myCard in cards track by $index"></single-card>
+  </div>
+</div>

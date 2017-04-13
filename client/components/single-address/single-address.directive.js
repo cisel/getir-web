@@ -1,0 +1,10 @@
+'use strict';
+
+angular.module('getirApp')
+  .directive('singleAddress', function() {
+    return {
+      templateUrl: 'components/single-address/single-address.html',
+      restrict: 'E',
+      controller: 'SingleAddressController'
+    };
+  });

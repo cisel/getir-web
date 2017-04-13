@@ -1,0 +1,36 @@
+.modal-content {
+  max-width: 340px;
+}
+
+.modal-dialog {
+  width: 340px !important;
+}
+
+.pr-modal-heading {
+  color: $primary-color;
+  font-size: 16px;
+  text-align: center;
+  margin-top: -35px;
+}
+
+.pr-modal-bottom {
+  margin-bottom: -15px;
+}
+
+.pr-bottom-price, .pr-bottom-btn {
+  height: 45px;
+}
+
+.pr-bottom-price {
+  background-color: $secondary-color;
+  color: $primary-color;
+  font-size: 19px;
+  padding-top: 9px;
+}
+
+.pr-bottom-btn {
+  background-color: $primary-color;
+  color: $w;
+  font-size: 15px;
+  padding-top: 11px;
+}
