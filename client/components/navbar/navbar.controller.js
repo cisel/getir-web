@@ -43,7 +43,7 @@ class NavbarController {
 }
   isActive(route) {
     return route === this.$location.path();
-  };
+  }
 }
 
 angular.module('getirApp')

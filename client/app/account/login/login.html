@@ -1,12 +1,12 @@
 <div class="container mt70">
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-12 account-general">
       <h1>Login</h1>
       <p>Accounts are reset on server restart from <code>server/config/seed.js</code>. Default account is <code>test@example.com</code> / <code>test</code></p>
       <p>Admin account is <code>admin@example.com</code> / <code>admin</code></p>
     </div>
     <div class="col-sm-12">
-      <form class="form" name="form" ng-submit="vm.login(form)" novalidate>
+      <form class="form account-form" name="form" ng-submit="vm.login(form)" novalidate>
 
         <div class="form-group">
           <label>Email</label>
@@ -20,7 +20,7 @@
           <input type="password" name="password" class="form-control" ng-model="vm.user.password" required>
         </div>
 
-        <div class="form-group has-error">
+        <div class="form-group has-error account-form">
           <p class="help-block" ng-show="form.email.$error.required && form.password.$error.required && vm.submitted">
              Please enter your email and password.
           </p>
@@ -32,13 +32,13 @@
         </div>
 
         <div>
-          <button class="btn btn-inverse btn-lg btn-login" type="submit">
+          <button class="col-sm-6 col-xs-12 btn btn-inverse btn-lg btn-login account-btn" type="submit">
             Login
           </button>
-          <a class="btn btn-default btn-lg btn-register" href="/signup">
+          <a class="col-sm-6 col-xs-12 btn btn-default btn-lg btn-register account-btn" href="/signup">
             Register
           </a>
-        </div>
+        </div><br>
 
         <hr/>
         <div class="row">

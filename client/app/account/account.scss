@@ -1,0 +1,18 @@
+.account-general h1, .account-general p, .account-form label, .account-form p{
+  color: #29326e;
+}
+
+.form-control:focus {
+  border-color: #5d3ebc;
+}
+
+.account-btn {
+  background-color: #5d3ebc;
+  color: white;
+
+  &:hover, &:focus, &:active {
+    background-color: #ffd10d;
+    color: white;
+    border-color: #ffd10d;
+  }
+}

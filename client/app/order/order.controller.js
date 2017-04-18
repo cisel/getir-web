@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('getirApp')
-  .controller('OrderController', function ($scope, $location, $timeout, Address, Auth, Basket, Card, NgMap) {
+  .controller('OrderController', function ($scope, $location, $timeout, Address, Auth, Basket, Card) {
     $scope.selectedAddress = Address.getSelected();
     $scope.cards = Card.get();
     $scope.deliveryPrice = 2.90;
@@ -14,7 +14,7 @@ angular.module('getirApp')
       this.address = address;
       this.card = card;
       this.basket = basket;
-    };
+    }
 
     $scope.sendOrder = (a, c) => {
       if (Auth.isLoggedIn()) {

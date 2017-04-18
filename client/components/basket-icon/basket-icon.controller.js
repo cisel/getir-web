@@ -50,7 +50,7 @@
         $scope.calcPrice();
         if(!$('.basket').hasClass('active-basket')) {
           $scope.openBasket();
-        };
+        }
         $scope.isEmpty();
       });
 
@@ -59,7 +59,7 @@
           $scope.windowHeight = $(window).innerHeight();
           $('.basket').css('height', $scope.windowHeight);
           $('.basket-inner').height($('.basket').height() - 130);
-        };
+        }
         setHeight();
 
         $(window).resize(function() {

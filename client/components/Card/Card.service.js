@@ -10,14 +10,14 @@ angular.module('getirApp')
     }
 
     function makeid() {
-      var text = "";
-      var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+      var text = '';
+      var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
-      for( var i=0; i < 5; i++ )
-          text += possible.charAt(Math.floor(Math.random() * possible.length));
-
-      return text;
-    };
+      for( var i=0; i < 5; i++ ) {
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+      }
+        return text;
+    }
 
     const API = {
       add: function(card, cb) {
@@ -26,8 +26,6 @@ angular.module('getirApp')
           newCard.id = makeid();
           cards.push(newCard);
           $localStorage.cards = cards;
-          console.log(newCard);
-          console.log($localStorage.cards)
           cb();
         }, 1000);
       },

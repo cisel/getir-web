@@ -9,5 +9,5 @@ angular.module('getirApp')
     $scope.addBasket = (obj) => {
       Basket.add(obj);
       $('#pr-modal').modal('hide');
-    }
+    };
   });

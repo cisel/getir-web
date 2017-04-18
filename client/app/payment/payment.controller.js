@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('getirApp')
-  .controller('PaymentController', function ($scope, Card, $rootScope, $timeout) {
+  .controller('PaymentController', function ($scope, Card, $rootScope) {
     $scope.cards = Card.get();
 
     $scope.card = {};
