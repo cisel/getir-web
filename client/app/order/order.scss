@@ -1,0 +1,54 @@
+.order-map-marker {
+  font-size: 35px;
+  color: $primary-color;
+}
+
+.payment-type-container, .payment-container {
+  background-color: $w;
+}
+
+.payment-inner-div {
+  border-bottom: 1px solid $border-gray;
+}
+
+.orderPage-heading {
+  color: $pr;
+}
+
+.order-address-exp {
+  min-width: 42px;
+  overflow: scroll;
+}
+
+.orderPage-price {
+  color: $primary-color;
+  & span {
+    font-size: 18px;
+  }
+}
+
+.cancel-order-btn, .order-send-btn {
+  border: none;
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.cancel-order-btn {
+  background-color: $secondary-color;
+  color: $primary-color;
+  &:hover, &:focus {
+    background-color: $secondary-color;
+    color: $primary-color;
+  }
+}
+
+.order-send-btn {
+  background-color: $primary-color;
+  color: $secondary-color;
+  &:hover, &:focus {
+    background-color: $primary-color;
+    color: $secondary-color;
+  }
+}
+

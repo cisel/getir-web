@@ -1,0 +1,31 @@
+#alert-modal .modal-body {
+  height: 130px;
+}
+
+.alert-text {
+  color: #5c6593;
+}
+
+.cancel-btn, .redirect-btn {
+  color: $w;
+  border: none;
+  &:hover {
+    color: $w;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+.cancel-btn {
+  background-color: $secondary-color;
+  &:hover, &:focus {
+    background-color: $secondary-color;
+  }
+}
+
+.redirect-btn {
+  background-color: $primary-color;
+  &:hover, &:focus {
+    background-color: $primary-color;
+  }
+}
