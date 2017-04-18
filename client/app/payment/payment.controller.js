@@ -17,33 +17,18 @@ angular.module('getirApp')
     $rootScope.$on('cancel add card', () => {
       $scope.addCardAction = false;
       $scope.deleteCardAction = false;
+      $scope.card = {};
     });
 
     $rootScope.$on('card added', () => {
       $scope.addCardAction = false;
       $scope.deleteCardAction = false;
-      // $scope.card = $scope.tempCard;
-    });
-
-    $rootScope.$on('edit card', (e, p) => {
-      $scope.deleteCardAction = true;
-      $scope.addCardAction = true;
-      $scope.card = p;
-      // $scope.card = {
-      //   cvc: 123,
-      //   expire: {
-      //     month:11,
-      //     year: 2020
-      //   },
-      //   id: 0,
-      //   name: "Cisel",
-      //   number: "4242424242424242",
-      //   type: "visa"
-      // };
+      $scope.card = {};
     });
 
     $rootScope.$on('card deleted', () => {
       $scope.addCardAction = false;
       $scope.deleteCardAction = false;
+      $scope.card = {};
     });
   });

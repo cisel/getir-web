@@ -15,12 +15,14 @@
     </div>
     <div class="col-xs-12 basket-inner">
       <basket-item ng-repeat="order in basket track by $index" order="order"></basket-item>
+      <h5 class="text-center basket-note" ng-show="emptyBasket">Sepetinizde Ürün Bulunmamaktadır</h5>
     </div>
-    <div class="col-xs-12 bottom-wrapper">
+    <div class="col-xs-12 bottom-wrapper" ng-hide="emptyBasket">
         <div class="row">
           <div class="col-xs-8 text-center bottom-btn">
-            <a href="#"><p>Devam Et</p></a>
+            <button type="button" class="btn btn-default icon-btn" ng-click="continue()">Devam Et</button>
           </div>
+          </a>
           <div class="col-xs-4 text-center bottom-price">
             <p>{{price | currency: "₺": 2}}</p>
           </div>

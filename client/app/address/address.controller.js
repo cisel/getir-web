@@ -9,12 +9,12 @@ angular.module('getirApp')
         value: 'Ev'
       },
       {
-        name: 'Is Adresi Ekle',
+        name: 'İş Adresi Ekle',
         icon: 'fa fa-building-o',
         value: 'Is'
       },
       {
-        name: 'Diger Adres Ekle',
+        name: 'Diğer Adres Ekle',
         icon: 'fa fa-map-marker',
         value: null
       }
@@ -45,20 +45,28 @@ angular.module('getirApp')
       $scope.addAction = true;
       $scope.address.name = p;
     });
-    $rootScope.$on('addAddress', () => {
+
+    $rootScope.$on('updatedAddress', () => {
       $scope.addAction = false;
       $scope.deleteAction = false;
       $scope.address = $scope.tempAddress;
     });
+
     $rootScope.$on('editAddress', (e, p) => {
       $scope.deleteAction = true;
       $scope.addAction = true;
       $scope.address = p;
     });
+
     $rootScope.$on('delete', () => {
       $timeout(() => {
         $scope.addAction = false;
         $scope.deleteAction = false;
       }, 1000);
-    })
+    });
+
+    $rootScope.$on('cancel add address', () => {
+      $scope.addAction = false;
+      $scope.deleteAction = false;
+    });
   });

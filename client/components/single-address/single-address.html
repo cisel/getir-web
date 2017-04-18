@@ -1,15 +1,18 @@
 <div class="col-sm-6 col-xs-12">
   <div class="panel panel-default">
-    <div class="panel-body single-address-container">
+    <div class="panel-body single-panel-container">
       <div class="row">
-        <div class="col-xs-10">
-          <h5>{{myAddress.name}}</h5>
-          <div class="single-address-desc">
-            <p>{{myAddress.desc}}</p>
+        <a class="col-xs-10" ng-click="selectAddress(address)" style="display: block;">
+          <h5 class="mt0">{{address.name}}</h5>
+          <div class="single-panel-desc">
+            <p>{{address.desc}}</p>
           </div>
+        </a>
+        <div class="col-xs-2 edit-panel-container text-center" ng-show="showEdit">
+          <a href="#" ng-click="editAddress(address)"><span class="fa fa-pencil-square-o single-panel-edit"></span></a>
         </div>
-        <div class="col-xs-2 edit-address-container text-center">
-          <a href="#" ng-click="editAddress(myAddress)"><span class="fa fa-pencil-square-o single-address-edit"></span></a>
+        <div class="col-xs-2 cont-panel-container text-center" ng-hide="showEdit">
+          <span class="fa fa-chevron-right single-panel-edit"></span>
         </div>
       </div>
     </div>

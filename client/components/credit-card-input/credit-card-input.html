@@ -1,33 +1,27 @@
 <div class="row adress-form-container" style="padding-top: 10px">
-  <div class="col-xs-12" ng-show="showDelete">
-    <a href="#" class="pull-right delete-btn" ng-click="deleteCard(card)">
-      <span class="fa fa-trash"></span>
-    </a>
-  </div>
   <div class="col-xs-12">
     <div class="row">
       <div class="form-group icon-container col-xs-12">
-        <card-number-input class="input-with-icon form-control" name="ccNumber" value="card.number" ng-model="card.number" placeholder="Kart Numarasi" card-type="card.type" id="card_number" ng-disabled="buttonClicked"></card-number-input>
+        <card-number-input class="input-with-icon form-control" name="ccNumber" ng-model="card.number" placeholder="Kart Numarası" card-type="card.type" id="card_number" ng-disabled="buttonClicked"></card-number-input>
         <span class="input-icon fa fa-credit-card"></span>
       </div>
       <div class="form-group icon-container col-xs-6">
-        {{ card }}
-        <card-expiry-input class="input-with-icon form-control" name="ccExpiry" ng-model="card.expire" placeholder="Kartin Son Kullanim Tarihi" id="card_expire" ng-disabled="buttonClicked"></card-expiry-input>
+        <card-expiry-input class="input-with-icon form-control" name="ccExpiry" ng-model="card.expire" placeholder="Kartın Son Kullanım Tarihi" id="card_expire" ng-disabled="buttonClicked"></card-expiry-input>
         <span class="input-icon fa fa-calendar"></span>
       </div>
       <div class="form-group icon-container col-xs-6">
-        <card-cvc-input class="input-with-icon form-control" name="ccCvc" value="card.cvc" ng-model="card.cvc" placeholder="Kartin Cvc Numarasi" id="card_cvc" ng-minlength="3" maxlength="4" ng-disabled="buttonClicked"></card-cvc-input>
+        <card-cvc-input class="input-with-icon form-control" name="ccCvc" value="card.cvc" ng-model="card.cvc" placeholder="Kartın Cvc Numarası" id="card_cvc" ng-minlength="3" maxlength="4" ng-disabled="buttonClicked"></card-cvc-input>
         <span class="input-icon fa fa-shield"></span>
       </div>
       <div class="form-group icon-container col-xs-12">
-        <input class="form-control input-with-icon" type="text" placeholder="Karta Isim Verin" id="card_name" name="card_name" value="card.name" ng-model="card.name" required ng-disabled="buttonClicked">
+        <input class="form-control input-with-icon" type="text" placeholder="Karta İsim Verin" id="card_name" name="card_name" value="card.name" ng-model="card.name" required ng-disabled="buttonClicked">
         <span class="input-icon fa fa-pencil-square-o"></span>
       </div>
       <div class="form-group col-xs-3">
-        <button type="submit" class="btn btn-default btn-block" ng-click="cancel()" ng-disabled="buttonClicked">Iptal</button>
+        <button type="submit" class="btn btn-primary form-cancel-btn" ng-click="cancel()" ng-disabled="buttonClicked">İptal</button>
       </div>
       <div class="form-group col-xs-9">
-        <button type="submit" class="btn btn-primary btn-block" ng-click="addCard()" ng-disabled="buttonClicked"><span>Kaydet</span>&nbsp;<span class="fa fa-spinner fa-spin btn-spinner" ng-show="buttonClicked"></span></button>
+        <button type="submit" class="btn btn-primary form-btn" ng-click="addCard()" ng-disabled="buttonDisabled(card)"><span>Kaydet</span>&nbsp;<span class="fa fa-spinner fa-spin btn-spinner" ng-show="buttonClicked"></span></button>
       </div>
     </div>
   </div>

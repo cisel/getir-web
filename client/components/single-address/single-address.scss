@@ -1,25 +1,28 @@
-.single-address-container {
+.single-panel-container {
   height: 96px;
   overflow: hidden;
 }
 
-.edit-address-container a, .edit-address-container a:hover, .edit-address-container a:active{
+.single-panel-container, .single-panel-container a, .single-panel-container a:hover, .single-panel-container a:active{
   color: #212b69;
   text-decoration: none;
 }
 
-.single-address-edit {
+.single-panel-edit {
   font-size: 23px;
   line-height: 44px;
 }
 
-.edit-address-container {
+.edit-panel-container, .cont-panel-container {
   height: 44px;
-  border-left: 1px solid $border-gray;
   margin-top: 10px;
 }
 
-.single-address-desc {
+.edit-panel-container {
+  border-left: 1px solid $border-gray;
+}
+
+.single-panel-desc {
   height: 50px;
   overflow: scroll;
 }

@@ -9,11 +9,21 @@ angular.module('getirApp')
       cards = $localStorage.cards;
     }
 
+    function makeid() {
+      var text = "";
+      var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+      for( var i=0; i < 5; i++ )
+          text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+      return text;
+    };
+
     const API = {
       add: function(card, cb) {
         $timeout(() => {
           const newCard = _.clone(card);
-          newCard.id = $localStorage.cards.length;
+          newCard.id = makeid();
           cards.push(newCard);
           $localStorage.cards = cards;
           console.log(newCard);

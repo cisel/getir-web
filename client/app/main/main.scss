@@ -93,10 +93,15 @@ body {
   color: $w !important;
 }
 
+
 .category-cont {
   border: 1px solid #dee5eb;
   padding-right: 0;
   background-color: $w;
+}
+
+.category-cont a, .category-cont a:hover {
+  color: $primary-color !important;
 }
 
 .category-heading {
@@ -107,3 +112,37 @@ body {
   float: right;
 }
 
+.main-address-cont {
+  margin-top: -294px;
+  color: $primary-color !important;
+}
+
+.dropdown-menu > li > a:hover, .navbar-default .navbar-nav > li > a:hover {
+  background-color: $primary-color;
+  border: 1px solid $primary-color;
+}
+
+.dropdown-menu > .active > a:hover, .navbar-default .navbar-nav > .active > a:hover {
+  border: 1px solid $secondary-color;
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+  background-color: $secondary-color !important;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: $w;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: $w;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:active, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  background-color: $secondary-color;
+}
+
+.removeAffix {
+  position: fixed !important;
+  top: 0 !important;
+}

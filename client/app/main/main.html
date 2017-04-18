@@ -1,4 +1,10 @@
-<ng-map id="map" center='current-position'></ng-map>
+<ng-map class="mt60" id="map" center='current-position'></ng-map>
+
+<div class="container">
+  <button class="main-address-cont text-left btn-block" ng-click="chooseAddress()">
+    <single-address address="selectedAddress" show-edit="false"></single-address>
+  </button>
+</div>
 
 <div class="container">
   <div class="row">
@@ -13,13 +19,4 @@
 
   <basket-icon class="basket-dir" ng-hide="basket.length === 0"></basket-icon>
 
-  <form class="thing-form">
-    <label>Syncs in realtime across clients</label>
-    <p class="input-group">
-      <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="newThing">
-      <span class="input-group-btn">
-        <button type="submit" class="btn btn-primary" ng-click="addThing()">Add New</button>
-      </span>
-    </p>
-  </form>
 </div>

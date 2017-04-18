@@ -28,17 +28,13 @@ body {
   position: absolute;
   right: 10px;
   background-color: $primary-color;
-  padding: 0 8px 3px;
+  padding: 0 9px 3px;
   border-radius: 15px;
-  margin-top: -2px;
-
-}
-
-.product-bottom a {
+  margin-top: -5px;
+  font-size: 20px;
   color: $secondary-color;
+  border: none;
 }
-
-
 
 .product-heading {
   color: $pr;

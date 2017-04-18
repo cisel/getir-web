@@ -20,7 +20,7 @@ angular.module('getirApp')
         subcategories: ['Taze Yemek']
       },
       {
-        name: 'Firinda Tavuklu Durum',
+        name: 'Fırında Tavuklu Dürüm',
         img: 'firindatavukludurum.png',
         price: '15.90',
         count: 1,
@@ -28,7 +28,7 @@ angular.module('getirApp')
         subcategories: ['Hazır Yemek']
       },
       {
-        name: 'Kofteli Durum',
+        name: 'Köfteli Dürüm',
         img: 'koftelidurum.png',
         price: '19.90',
         count: 1,
@@ -44,7 +44,7 @@ angular.module('getirApp')
         subcategories: ['Yeni Ürünler', 'Bulaşık']
       },
       {
-        name: 'Kahve Dunyasi Gofrik 8\'li',
+        name: 'Kahve Dünyası Gofrik 8\'li',
         img: 'gofrik.png',
         price: '18.90',
         count: 1,

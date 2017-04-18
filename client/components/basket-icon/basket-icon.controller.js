@@ -1,9 +1,23 @@
 'use strict';
 
   angular.module('getirApp')
-    .controller('BasketIconController', function($scope, $rootScope, $localStorage, $route, Basket) {
+    .controller('BasketIconController', function($scope, $rootScope, $localStorage, $location, $route, Auth, Basket) {
       $scope.basket = Basket.get();
       $scope.price = Basket.price();
+      $scope.emptyBasket = null;
+      $scope.isEmpty = () => {
+        $scope.emptyBasket = $scope.basket.length < 1;
+      };
+      $scope.isEmpty();
+
+      $scope.continue = () => {
+        if (Auth.isLoggedIn()) {
+          $location.url('/order');
+        } else {
+          $location.url('/login');
+        }
+      };
+
       $scope.calcPrice = function () {
         $scope.price = Basket.price();
       };
@@ -11,11 +25,12 @@
       $scope.openBasket = () => {
         $('.basket').toggleClass('active-basket');
         $('.basket-dir').toggleClass('active-basket-dir');
-      }
+      };
 
       $scope.removeBasket = () => {
         Basket.remove();
         $scope.basket = Basket.get();
+        $scope.isEmpty();
       };
 
       $scope.$watch(function () { return $localStorage.basket; }, function () {
@@ -24,6 +39,7 @@
 
       $rootScope.$on('decrease', () => {
         $scope.calcPrice();
+        $scope.isEmpty();
       });
 
       $rootScope.$on('increase', () => {
@@ -34,7 +50,8 @@
         $scope.calcPrice();
         if(!$('.basket').hasClass('active-basket')) {
           $scope.openBasket();
-        }
+        };
+        $scope.isEmpty();
       });
 
       $(document).ready(function() {

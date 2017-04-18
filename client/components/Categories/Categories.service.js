@@ -64,11 +64,6 @@ angular.module('getirApp')
         subcategories: ['Sıvı Yağ', 'Bakliyat & Makarna', 'Sos', 'Tereyağ & Margarin', 'Çorba', 'Baharat', 'Şeker']
       },
       {
-        name: 'BiTaksi',
-        img:'bitaksi.png',
-        path: 'bitaksi'
-      },
-      {
         name: 'Ev Bakım',
         img:'evbakim.png',
         path: 'evbakim',
@@ -96,7 +91,7 @@ angular.module('getirApp')
         name: 'Bebek',
         img:'bebek.png',
         path: 'bebek',
-        subcategories: ['Bebek Bakım', 'Cocuk Bezi', 'Mama']
+        subcategories: ['Bebek Bakım', 'Çocuk Bezi', 'Mama']
       },
       {
         name: 'Cinsel Sağlık',

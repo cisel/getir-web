@@ -5,6 +5,10 @@ angular.module('getirApp')
     return {
       templateUrl: 'components/single-address/single-address.html',
       restrict: 'E',
+      scope: {
+        address: '=',
+        showEdit: '='
+      },
       controller: 'SingleAddressController'
     };
   });

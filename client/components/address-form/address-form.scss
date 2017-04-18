@@ -57,9 +57,23 @@
   }
 }
 
-.form-btn {
+.form-btn, .form-cancel-btn {
   width: 100%;
+  border: none;
+}
+
+.form-btn {
   background-color: $primary-color;
+}
+
+.form-cancel-btn {
+  background-color: $secondary-color;
+}
+
+.form-cancel-btn:hover, .form-cancel-btn:focus {
+  background-color: $secondary-color;
+  border: 1px solid $secondary-color;
+  outline: none;
 }
 
 .form-btn:hover, .form-btn:focus, .form-btn:active, .btn-primary[disabled], .form-btn[disabled]:active {

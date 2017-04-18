@@ -3,7 +3,7 @@
     <add-buttons ng-repeat="btn in addButtons"></add-buttons>
   </div>
   <div class="row" ng-hide="addAction">
-    <single-address ng-repeat="myAddress in addresses"></single-address>
+    <single-address ng-repeat="myAddress in addresses" address="myAddress" show-edit="true"></single-address>
   </div>
   <div class="row" ng-if="addAction" style="margin-top: 100px;">
     <address-form address="address" delete="deleteAction"></address-form>

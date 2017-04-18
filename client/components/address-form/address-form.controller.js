@@ -2,18 +2,17 @@
 
   angular.module('getirApp')
     .controller('AddressFormController', function($scope, $rootScope, Address) {
-
-
       $scope.btnClicked = false;
 
       $scope.addresses = Address.get();
 
-      $scope.addAddress = () => {
+      $scope.updateAddress = () => {
         $scope.btnClicked = true;
-        Address.add($scope.address, () => {
+
+        Address[($scope.address.id) ? 'edit' : 'add']($scope.address, () => {
           $scope.addresses = Address.get();
           $scope.btnClicked = false;
-          $rootScope.$broadcast('addAddress');
+          $rootScope.$broadcast('updatedAddress');
         });
       };
 
@@ -23,6 +22,10 @@
           $scope.addresses = Address.get();
           $scope.btnClicked = false;
         });
+      };
+
+      $scope.cancel = () => {
+        $rootScope.$broadcast('cancel add address');
       };
   });
 
