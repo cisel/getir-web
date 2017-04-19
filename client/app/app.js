@@ -9,7 +9,6 @@ angular.module('getirApp', [
     'ngResource',
     'ngSanitize',
     'ngRoute',
-    'btford.socket-io',
     'ui.bootstrap',
     'validation.match',
     'payment',
