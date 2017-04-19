@@ -138,7 +138,7 @@ body {
   border-color: $w;
 }
 
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:active, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:active, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:active, .navbar-default .navbar-nav > .open > a:focus {
   background-color: $secondary-color;
 }
 
