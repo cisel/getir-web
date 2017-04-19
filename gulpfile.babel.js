@@ -480,6 +480,7 @@ gulp.task('build', cb => {
         [
             'build:images',
             'copy:extras',
+            'copy:bootstrap',
             'copy:fonts',
             'copy:assets',
             'copy:server',
@@ -566,6 +567,13 @@ gulp.task('copy:extras', () => {
         `${clientPath}/.htaccess`
     ], { dot: true })
         .pipe(gulp.dest(`${paths.dist}/${clientPath}`));
+});
+
+gulp.task('copy:bootstrap', () => {
+    return gulp.src([
+        `${clientPath}/bower_components/bootstrap/dist/js/bootstrap.min.js`
+    ], { dot: true })
+        .pipe(gulp.dest(`${paths.dist}/${clientPath}/bower_components/bootstrap/dist/js`));
 });
 
 gulp.task('copy:fonts', () => {

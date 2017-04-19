@@ -9,11 +9,6 @@
       $scope.basket = Basket.get();
       $scope.selectedAddress = Address.getSelected();
 
-      $scope.callbackFunc = function (param) {
-        console.log('I know where '+ param +' are. ' + $scope.message);
-        console.log('You are at ' + $scope.map.getCenter());
-      };
-
       $scope.chooseAddress = () => {
         $location.url('/my-addresses');
       };
