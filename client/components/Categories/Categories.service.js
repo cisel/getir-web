@@ -25,13 +25,13 @@ angular.module('getirApp')
         name: 'İçecek',
         img:'icecek.png',
         path: 'icecek',
-        subcategories: ['Gazlı İçecek', 'Su & Maden Suyu', 'Süt', 'Soğuk Çay & Kahve', 'Enerji İçeceği', 'Meyve Suyu', 'Ayran & Kefir', 'Çay', 'Kahve', 'Yoğurtlu İçecek', 'Sporcu İçeceği']
+        subcategories: ['Gazlı İçecek', 'Su & Maden Suyu', 'Süt', 'Soğuk Çay & Kahve', 'Enerji İçeceği', 'Meyve Suyu', 'Ayran & Kefir', 'Çay', 'Kahve', 'Sporcu İçeceği']
       },
       {
         name: 'Fit & Form',
         img:'fit.png',
         path: 'fit-form',
-        subcategories: ['Taze Yemek', 'Tahıllı Gevrek', 'Granola', 'İçecek', 'Protein Bar', 'Sporcu Takviye', 'Bakliyat & Konserve', 'Süt Ürünleri', 'Kraker & Kek', 'Kuruyemiş']
+        subcategories: ['Tahıllı Gevrek', 'Granola', 'İçecek', 'Protein Bar', 'Sporcu Takviye', 'Bakliyat & Konserve', 'Süt Ürünleri', 'Kraker & Kek', 'Kuruyemiş']
       },
       {
         name: 'Atıştırmalık',
@@ -67,7 +67,7 @@ angular.module('getirApp')
         name: 'Ev Bakım',
         img:'evbakim.png',
         path: 'evbakim',
-        subcategories: ['Çamaşır', 'Bulaşık', 'Temizlik', 'Kağıt ÜrÜnleri', 'Mutfak', 'Yüzey Temizlik', 'Oda Kokusu', 'Böcek İlacı']
+        subcategories: ['Çamaşır', 'Bulaşık', 'Temizlik', 'Kağıt Ürünleri', 'Mutfak', 'Yüzey Temizlik', 'Oda Kokusu', 'Böcek İlacı']
       },
       {
         name: 'Teknoloji',

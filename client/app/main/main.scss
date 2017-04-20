@@ -1,6 +1,9 @@
 $primary-color: #5d3ebc;
 $secondary-color: #ffd10d;
+$hoverp:  #432d86;
+$hovers:  #e6bb00;
 $w: #fff;
+$darkerw:  #f2f2f2;
 $border-gray: #d2d7e0;
 $pr: #29326e;
 
@@ -29,18 +32,10 @@ body {
   position: relative;
   top: 111px;
   z-index: 1100 !important;
-  margin-bottom: -52px;
+  margin-bottom: -49px;
 }
 
-.xs-promotions {
-  float: right;
-  position: relative;
-  right: 60px;
-  bottom: 40px;
-  font-size: 22px;
-}
-
-.larger-promotions, #dropdownMainMenu {
+#dropdownMainMenu {
   font-size: 20px;
 }
 
@@ -118,16 +113,14 @@ body {
 }
 
 .dropdown-menu > li > a:hover, .navbar-default .navbar-nav > li > a:hover {
-  background-color: $primary-color;
-  border: 1px solid $primary-color;
+  background-color: $hoverp !important;
+  border: none;
 }
 
-.dropdown-menu > .active > a:hover, .navbar-default .navbar-nav > .active > a:hover {
-  border: 1px solid $secondary-color;
-}
-
-.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
-  background-color: $secondary-color !important;
+#dropdownMainMenu:hover, .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-toggle:hover {
+  background-color: $hovers !important;
+  color: $primary-color !important;
+  border: none;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -138,8 +131,9 @@ body {
   border-color: $w;
 }
 
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:active, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:active, .navbar-default .navbar-nav > .open > a:focus {
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:focus, .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:active, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:active, .navbar-default .navbar-nav > .open > a:focus {
   background-color: $secondary-color;
+  color: $primary-color !important;
 }
 
 .removeAffix {

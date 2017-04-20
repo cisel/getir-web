@@ -31,7 +31,7 @@ class NavbarController {
         $('#affixedNav').removeClass('removeAffix');
         $('#affixedNav').affix({
           offset: {
-           top: 110,
+           top: 110
           }
         });
       } else {

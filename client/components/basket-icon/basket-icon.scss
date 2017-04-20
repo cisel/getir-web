@@ -8,6 +8,7 @@
   border: 1px solid $w;
 }
 
+
 .icon-img {
   float: left;
   margin: 11px;
@@ -41,6 +42,9 @@
 .basket-remove a {
   color: #5c6593;
   text-decoration: none;
+  &:hover {
+    color:  #454c6e;
+  }
 }
 
 .basket-remove {

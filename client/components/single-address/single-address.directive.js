@@ -7,7 +7,8 @@ angular.module('getirApp')
       restrict: 'E',
       scope: {
         address: '=',
-        showEdit: '='
+        showEdit: '=',
+        hideAddress: '='
       },
       controller: 'SingleAddressController'
     };

@@ -13,6 +13,7 @@
   &:hover, &:focus, &:active {
     background-color: #ffd10d;
     color: white;
-    border-color: #ffd10d;
+    border-color: #ffd10d !important;
+    outline: none;
   }
 }

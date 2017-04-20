@@ -33,14 +33,14 @@
     <h5 class="orderPage-heading">Ödeme</h5>
     <div class="col-xs-12 pt10 pb10 payment-container">
       <div class="col-xs-12 mt10 payment-inner-div">
-        <p>Sepet Tutari: <span class="pull-right">{{basketPrice}}</span></p>
+        <p>Sepet Tutari: <span class="pull-right">{{basketPrice | currency: "₺": 2}}</span></p>
       </div>
       <div class="col-xs-12 mt10 payment-inner-div">
-        <p>Getirmesi: <span class="pull-right">{{deliveryPrice}}</span></p>
+        <p>Getirmesi: <span class="pull-right">{{deliveryPrice | currency: "₺": 2}}</span></p>
       </div>
       <div class="col-xs-12 mt10">
         <img src="/assets/images/{{selectedCard.type}}.png" alt="{{selectedCard.type}}">
-        <span class="pull-right orderPage-price">Ödenecek Tutar&nbsp;&nbsp;&nbsp;&nbsp;<span>{{totalPrice}}</span></span>
+        <span class="pull-right orderPage-price">Ödenecek Tutar&nbsp;&nbsp;&nbsp;&nbsp;<span>{{totalPrice | currency: "₺": 2}}</span></span>
       </div>
     </div>
   </div>

@@ -1,43 +1,27 @@
 'use strict';
 
   angular.module('getirApp')
-    .controller('MainController', function($http, $scope, $location, Address, Categories, $timeout, Auth, Basket, NgMap) {
+    .controller('MainController', function($http, $scope, $location, Address, Categories, $timeout, Basket, NgMap) {
       // $scope.NgMap = NgMap;
-      $scope.awesomeThings = [];
-
       $scope.categories = Categories.get();
       $scope.basket = Basket.get();
       $scope.selectedAddress = Address.getSelected();
+      $scope.emptyAddress = null;
+
+      $scope.isAddressesEmpty = () => {
+        $scope.emptyAddress = $scope.selectedAddress === null;
+        console.log($scope.emptyAddress);
+      }
+      $scope.isAddressesEmpty();
 
       $scope.chooseAddress = () => {
         $location.url('/my-addresses');
       };
 
-      $scope.onInit = () => {
-        $http.get('/api/things')
-        .then(response => {
-          $scope.awesomeThings = response.data;
-        });
-      };
-
-      $scope.addThing = () => {
-        if ($scope.newThing) {
-         $http.post('/api/things', {
-          name: $scope.newThing
-        });
-        $scope.newThing = '';
-        }
-      };
-
-      $scope.deleteThing = (thing) => {
-        $http.delete('/api/things/' + thing._id);
-      };
-
       $timeout(() => {
         NgMap.getMap().then(function(map) {
           $scope.map = map;
-          // console.log($scope.map);
-          $scope.callbackFunc(map);
+          console.log($scope.map);
         });
       }, 1500);
     });

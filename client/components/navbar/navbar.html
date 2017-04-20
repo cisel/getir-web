@@ -11,9 +11,9 @@
         <img src="/assets/images/getir-logo.png" alt="getir-logo" class="img-responsive nav-logo">
       </a>
     </div>
-    <li class="visible-xs xs-promotions" ng-class="{active: nav.isActive('/promotions')}"><a href="/promotions"><span class="fa fa-gift nav-item-color"></span></a></li>
     <div uib-collapse="nav.isCollapsed" class="navbar-collapse collapse" id="navbar-main">
       <ul class="nav navbar-nav navbar-right">
+        <li class="" ng-show="nav.isLoggedIn()"><p class="navbar-text nav-item-color">Merhaba {{ nav.getCurrentUser().name }}</p></li>
         <li class="visible-xs" ng-repeat="item in nav.userMenu" ng-class="{active: nav.isActive(item.link)}" ng-show="nav.isLoggedIn()">
           <a href="{{item.link}}" class="nav-item-color">{{item.title}}</a>
         </li>
@@ -22,10 +22,8 @@
         </li>
         <li class="visible-xs" ng-hide="nav.isLoggedIn()" ng-class="{active: nav.isActive('/signup')}"><a href="/signup" class="nav-item-color">Sign up</a></li>
         <li class="visible-xs" ng-hide="nav.isLoggedIn()" ng-class="{active: nav.isActive('/login')}"><a href="/login" class="nav-item-color">Login</a></li>
-        <li class="" ng-show="nav.isLoggedIn()"><p class="navbar-text nav-item-color">Hello {{ nav.getCurrentUser().name }}</p></li>
-        <li class="" ng-show="nav.isLoggedIn()"><a href="/logout" class="nav-item-color">Logout</a></li>
+        <li class="visible-xs" ng-show="nav.isLoggedIn()"><a href="/logout" class="nav-item-color">Logout</a></li>
         <li class="" ng-show="nav.isAdmin()" ng-class="{active: nav.isActive('/admin')}"><a href="/admin">Admin</a></li>
-        <li class="hidden-xs larger-promotions" ng-class="{active: nav.isActive('/promotions')}"><a href="/promotions"><span class="fa fa-gift nav-item-color"></span></a></li>
         <li class="hidden-xs" id="mf-navbar-user-menu">
           <a href="#" class="dropdown-toggle text-center" id="dropdownMainMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" ng-mouseover="menuMouseOver('user')" ng-mouseleave="menuMouseLeave(2300, 'user')"><span class="fa fa-bars nav-item-color"></span>
           </a>
@@ -38,6 +36,7 @@
             </li>
             <li ng-hide="nav.isLoggedIn()" ng-class="{active: nav.isActive('/signup')}"><a href="/signup" class="nav-item-color">Sign up</a></li>
             <li ng-hide="nav.isLoggedIn()" ng-class="{active: nav.isActive('/login')}"><a href="/login" class="nav-item-color">Login</a></li>
+            <li class="nav-item-color" ng-show="nav.isLoggedIn()"><a href="/logout" class="nav-item-color">Logout</a></li>
           </ul>
         </li>
       </ul>
