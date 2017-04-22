@@ -60,6 +60,9 @@
 .form-btn, .form-cancel-btn {
   width: 100%;
   border: none;
+  &:active:focus {
+    outline: none;
+  }
 }
 
 .form-btn {

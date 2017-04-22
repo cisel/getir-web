@@ -37,6 +37,9 @@ body {
   &:hover {
     background-color: $hoverp;
   }
+  &:focus {
+    outline: none;
+  }
 }
 
 .product-heading {

@@ -1,12 +1,10 @@
-<a href="#" ng-click="opnMdl(product)">
-  <div class="row single-item-container">
-    <div class="col-xs-12 single-item-info">
-      <img ng-src="/assets/images/{{product.img}}" alt="{{product.name}}" class="img-responsive">
-      <h6 class="text-center product-heading">{{product.name}}</h6>
-    </div>
-    <div class="col-xs-12 product-bottom">
-      <span class="single-item-price">{{product.price}}</span>
-      <button type="button" class="add-basket-btn" ng-click="addOrder(product)">+</button>
-    </div>
+<div class="row single-item-container">
+  <a href="#" ng-click="opnMdl(product)" class="col-xs-12 single-item-info">
+    <img ng-src="/assets/images/{{product.img}}" alt="{{product.name}}" class="img-responsive">
+    <h6 class="text-center product-heading">{{product.name}}</h6>
+  </a>
+  <div class="col-xs-12 product-bottom">
+    <span class="single-item-price">{{product.price}}</span>
+    <button type="button" class="add-basket-btn" ng-click="addOrder(product)">+</button>
   </div>
-</a>
+</div>
