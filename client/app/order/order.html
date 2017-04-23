@@ -15,8 +15,10 @@
     </div>
   </div>
   <div class="col-sm-8 col-xs-12 mt25">
-    <h5 class="orderPage-heading">Ödeme YÖntemi</h5>
-    <div class="col-xs-12 pt20 pb5 payment-type-container">
+    <h5 class="orderPage-heading">Ödeme Yöntemi</h5>
+    <div class="col-xs-12 pt15 pb5 payment-type-container">
+      <a href="#" ng-click="addCardFromOrder()">Kart ekle</a><br><br>
+      <p ng-show="cards.length === 0">Kayıtlı kredi kartınız bulunmuyor.</p>
       <form name="cardRadioButtons" ng-repeat="card in cards">
         <label>
           <input class="pull-left" type="radio" name="cardRadios" id="{{ card.name }}" ng-model="$parent.selectedCard" ng-value="card">
@@ -39,7 +41,8 @@
         <p>Getirmesi: <span class="pull-right">{{deliveryPrice | currency: "₺": 2}}</span></p>
       </div>
       <div class="col-xs-12 mt10">
-        <img src="/assets/images/{{selectedCard.type}}.png" alt="{{selectedCard.type}}">
+        <img ng-src="/assets/images/{{selectedCard.type}}.png" alt="{{selectedCard.type}}">
+        <span>&nbsp;{{selectedCard.lastPart}}</span>
         <span class="pull-right orderPage-price">Ödenecek Tutar&nbsp;&nbsp;&nbsp;&nbsp;<span>{{totalPrice | currency: "₺": 2}}</span></span>
       </div>
     </div>
@@ -56,7 +59,10 @@
   </div>
 </div>
 
+<basket-icon class="basket-dir" ng-hide="basket.length === 0" ng-hide="orderSent"></basket-icon>
+
 <div class="container mt70" ng-if="orderSent">
   <ng-map id="map" center='current-position'></ng-map>
   <h2 class="orderPage-heading mt 20">Siparişiniz Yola Çıkmıştır</h2>
 </div>
+<br><br><br><br><br><br>

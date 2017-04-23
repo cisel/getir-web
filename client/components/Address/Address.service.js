@@ -24,6 +24,9 @@ angular.module('getirApp')
           newAddress.id = $localStorage.addresses.length;
           addresses.push(newAddress);
           $localStorage.addresses = addresses;
+          if ($localStorage.addresses.length === 1) {
+            $localStorage.selectedAddress = $localStorage.addresses[0];
+          }
           cb();
         }, 1000);
       },
@@ -31,10 +34,14 @@ angular.module('getirApp')
       delete: (address, cb) => {
         $rootScope.$broadcast('delete');
         $timeout(() => {
-          if($localStorage.addresses) {
+          if ($localStorage.addresses) {
             addresses.splice(addresses.indexOf(address), 1);
             $localStorage.addresses = addresses;
             cb();
+          }
+
+          if ($localStorage.selectedAddress && address.id === $localStorage.selectedAddress.id) {
+            $localStorage.selectedAddress = null;
           }
         }, 1000);
       },

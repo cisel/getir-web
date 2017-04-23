@@ -3,6 +3,7 @@
   angular.module('getirApp')
     .controller('AddressFormController', function($scope, $rootScope, Address) {
       $scope.btnClicked = false;
+      $scope.modalProduct = $rootScope.selectedProduct;
 
       $scope.addresses = Address.get();
 
@@ -14,6 +15,10 @@
           $scope.btnClicked = false;
           $rootScope.$broadcast('updatedAddress');
         });
+        if ($scope.modalProduct) {
+          console.log($scope.modalProduct);
+          $rootScope.$broadcast('open', $scope.modalProduct);
+        }
       };
 
       $scope.deleteAddress = (p) => {

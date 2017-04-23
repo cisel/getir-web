@@ -27,11 +27,12 @@ footer.footer {
   border: 1px solid $secondary-color;
   border-radius: 27px;
   padding: 13px 0;
-  margin-top: 20px;
+  margin: 20px auto 0;
   width: 50px;
   height: 50px;
 }
 
 .footer-app-store {
-  margin-top: 10px;
+  margin: 10px auto;
+  display: inline-block;
 }

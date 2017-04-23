@@ -23,7 +23,6 @@
         <li class="visible-xs" ng-hide="nav.isLoggedIn()" ng-class="{active: nav.isActive('/signup')}"><a href="/signup" class="nav-item-color">Sign up</a></li>
         <li class="visible-xs" ng-hide="nav.isLoggedIn()" ng-class="{active: nav.isActive('/login')}"><a href="/login" class="nav-item-color">Login</a></li>
         <li class="visible-xs" ng-show="nav.isLoggedIn()"><a href="/logout" class="nav-item-color">Logout</a></li>
-        <li class="" ng-show="nav.isAdmin()" ng-class="{active: nav.isActive('/admin')}"><a href="/admin">Admin</a></li>
         <li class="hidden-xs" id="mf-navbar-user-menu">
           <a href="#" class="dropdown-toggle text-center" id="dropdownMainMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" ng-mouseover="menuMouseOver('user')" ng-mouseleave="menuMouseLeave(2300, 'user')"><span class="fa fa-bars nav-item-color"></span>
           </a>

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('getirApp')
-  .controller('OrderController', function ($scope, $location, $timeout, Address, Auth, Basket, Card) {
+  .controller('OrderController', function ($scope, $location, $rootScope, $timeout, Address, Auth, Basket, Card) {
     $scope.selectedAddress = Address.getSelected();
     $scope.cards = Card.get();
     $scope.deliveryPrice = 2.90;
@@ -29,7 +29,11 @@ angular.module('getirApp')
     };
 
     $scope.cancelOrder = () => {
-      console.log('ser');
       $location.url('/');
+    };
+
+    $scope.addCardFromOrder = () => {
+      $rootScope.redirectBackToOrder = true;
+      $location.url('/payment');
     };
   });

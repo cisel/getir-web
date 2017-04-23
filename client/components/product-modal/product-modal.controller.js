@@ -4,7 +4,8 @@ angular.module('getirApp')
   .controller('ProductModalController', function ($scope, $rootScope, Address, Basket) {
     $scope.current = {};
     $rootScope.$on('open', (e, p) => {
-        $scope.current = p;
+      $scope.current = p;
+      $('#pr-modal').modal();
     });
     $scope.addBasket = (obj) => {
       if (Address.getSelected() === null) {

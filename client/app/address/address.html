@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="row" style="margin-top: 100px;" ng-hide="addAction">
+  <div class="row address-add-buttons" style="margin: 100px -15px 20px;" ng-hide="addAction">
     <add-buttons ng-repeat="btn in addButtons"></add-buttons>
   </div>
   <div class="row" ng-hide="addAction">
@@ -8,5 +8,16 @@
   <div class="row" ng-if="addAction" style="margin-top: 100px;">
     <address-form address="address" delete="deleteAction"></address-form>
   </div>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <basket-icon class="basket-dir" ng-hide="basket.length === 0"></basket-icon>
+
+  <div class="modal fade" id="pr-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <product-modal></product-modal>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>

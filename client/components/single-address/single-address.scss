@@ -11,6 +11,7 @@
 .single-panel-edit {
   font-size: 23px;
   line-height: 44px;
+  color: $primary-color;
 }
 
 .edit-panel-container, .cont-panel-container {
@@ -25,4 +26,9 @@
 .single-panel-desc {
   height: 50px;
   overflow: scroll;
+}
+
+.address-placeholder {
+  color: $primary-color;
+  line-height: 62px;
 }

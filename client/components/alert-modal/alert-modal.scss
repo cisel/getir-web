@@ -15,17 +15,23 @@
   &:focus {
     outline: none;
   }
+  &:active:focus {
+    outline: none;
+  }
 }
 .cancel-btn {
   background-color: $secondary-color;
+  color: $primary-color;
   &:hover, &:focus {
-    background-color: $secondary-color;
+    background-color: $hovers;
+    color: $primary-color;
   }
 }
 
 .redirect-btn {
   background-color: $primary-color;
   &:hover, &:focus {
-    background-color: $primary-color;
+    background-color: $hoverp;
+    color: $w;
   }
 }

@@ -8,6 +8,7 @@ angular.module('getirApp')
 
     $scope.redirect = () => {
       $('#alert-modal').modal('hide');
+      $('body').removeClass('modal-open');
       $('.modal-backdrop').remove();
       $location.url('/my-addresses');
     };

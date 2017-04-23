@@ -1,9 +1,9 @@
-<div class="col-sm-6 col-xs-12">
+<div class="col-md-6 col-sm-12">
   <div class="panel panel-default">
     <div class="panel-body single-panel-container">
       <div class="row">
-        <a class="col-xs-10" ng-click="selectAddress(address)" style="display: block;">
-          <p ng-show="hideAddress">Teslimat Adresi Ekleyin</p>
+        <a href="#" class="col-xs-10" ng-click="selectAddress(address)" style="display: block;">
+          <p class="address-placeholder" ng-show="addresses.length === 0">Teslimat Adresi Ekleyin</p>
           <h5 class="mt0">{{address.name}}</h5>
           <div class="single-panel-desc">
             <p>{{address.desc}}</p>

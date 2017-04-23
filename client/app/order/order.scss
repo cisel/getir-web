@@ -38,17 +38,25 @@
   background-color: $secondary-color;
   color: $primary-color;
   &:hover, &:focus {
-    background-color: $secondary-color;
+    background-color: $hovers;
     color: $primary-color;
   }
 }
 
 .order-send-btn {
   background-color: $primary-color;
-  color: $secondary-color;
+  color: $w;
   &:hover, &:focus {
-    background-color: $primary-color;
-    color: $secondary-color;
+    background-color: $hoverp;
+    color: $w;
   }
 }
+
+.payment-type-container a {
+  color: $primary-color;
+  &:hover, &:focus {
+    color: $hoverp;
+  };
+}
+
 

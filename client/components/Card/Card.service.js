@@ -24,6 +24,7 @@ angular.module('getirApp')
         $timeout(() => {
           const newCard = _.clone(card);
           newCard.id = makeid();
+          newCard.lastPart = newCard.number.substr(newCard.number.length - 4);
           cards.push(newCard);
           $localStorage.cards = cards;
           cb();

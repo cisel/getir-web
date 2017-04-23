@@ -80,7 +80,7 @@
   outline: none;
 }
 
-.form-btn:hover, .form-btn:focus, .form-btn:active, .btn-primary[disabled], .form-btn[disabled]:active {
+.form-btn:hover, .form-btn:focus, .form-btn:active, .btn-primary[disabled], .btn-primary[disabled]:hover, .form-btn[disabled]:active {
   background-color: $hoverp;
   outline: none;
   outline-offset: 0;

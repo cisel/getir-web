@@ -1,17 +1,19 @@
 <div class="container">
-  <div class="row" style="margin-top: 100px;" ng-hide="addCardAction">
-    <a href="#" class="col-sm-4 col-xs-12" style="display: block;" ng-click="openCardInputForm()">
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <div class="row">
-            <div class="col-xs-12 add-btn-cont">
-              <p class="mb5 mt5 pull-left"><span class="fa fa-credit-card"></span>&nbsp;&nbsp;Kart Ekle</p>
-              <span class="pull-right add-btn-plus">+</span>
+  <div class="row payment-row" style="margin: 100px -15px 20px;" ng-hide="addCardAction">
+    <div class="col-sm-4 col-xs-12">
+      <a href="#" style="display: block;" ng-click="openCardInputForm()">
+        <div class="panel panel-default panel-hoverable m0">
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-xs-12 add-btn-cont">
+                <p class="mb5 mt5 pull-left"><span class="fa fa-credit-card"></span>&nbsp;&nbsp;Kart Ekle</p>
+                <span class="pull-right add-btn-plus">+</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </a>
+      </a>
+    </div>
   </div>
 
   <div class="row" ng-show="addCardAction" style="margin-top: 100px;">
@@ -20,5 +22,7 @@
   <div class="row" ng-hide="addCardAction">
     <single-card card="myCard" ng-repeat="myCard in cards track by $index"></single-card>
   </div>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <basket-icon class="basket-dir" ng-hide="basket.length === 0"></basket-icon>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
