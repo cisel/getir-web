@@ -5,7 +5,9 @@
     </a>
   </div>
   <div class="col-xs-12 map-container">
-    <ng-map id="map" center='current-position'></ng-map>
+    <ng-map id="map">
+      <marker position="{{ latLng }}" draggable="true" centered="true" on-dragend="markerDragEnd()"></marker>
+    </ng-map>
   </div>
   <div class="col-xs-12">
     <div class="row">

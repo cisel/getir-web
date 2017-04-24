@@ -1,6 +1,6 @@
 <div class="top-category">
   <div class="top-category-menu">
-    <div class="single-category" ng-repeat="category in categories" id="{{category.path}}">
+    <div class="single-category" ng-repeat="category in categories track by $index" data-width="{{$index * 120}}" id="{{category.path}}">
       <a href="/products?category={{category.path}}">
         <div class="category-menu-img">
           <img ng-src="/assets/images/{{category.img}}" alt="{{category.name}}" class="img-responsive">

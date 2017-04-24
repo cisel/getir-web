@@ -1,4 +1,6 @@
-<ng-map class="mt50" id="map" center='current-position'></ng-map>
+<ng-map class="mt50" id="map">
+  <marker position="{{selectedAddress.lat}}, {{selectedAddress.lng}}" centered="true"></marker>
+</ng-map>
 
 <div class="container">
   <button class="main-address-cont text-left btn-block row" ng-click="chooseAddress()">

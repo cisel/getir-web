@@ -10,6 +10,7 @@ angular.module('getirApp', [
     'ngSanitize',
     'ngRoute',
     'ui.bootstrap',
+    'ui-notification',
     'validation.match',
     'payment',
     'duScroll',

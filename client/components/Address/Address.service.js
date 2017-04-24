@@ -17,11 +17,21 @@ angular.module('getirApp')
       selectedAddress = $localStorage.selectedAddress;
     }
 
+    function makeid() {
+      var text = '';
+      var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+      for( var i=0; i < 5; i++ ) {
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+      }
+        return text;
+    }
+
     const API = {
       add: function(address, cb) {
         $timeout(() => {
           const newAddress = _.clone(address);
-          newAddress.id = $localStorage.addresses.length;
+          newAddress.id = makeid();
           addresses.push(newAddress);
           $localStorage.addresses = addresses;
           if ($localStorage.addresses.length === 1) {

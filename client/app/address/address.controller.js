@@ -22,13 +22,13 @@ angular.module('getirApp')
     $scope.addresses = Address.get();
 
     $scope.tempAddress = {
-        name: null,
-        desc: null,
-        buildingNo: null,
-        apartmentNo: null,
-        floor: null,
-        exp: null
-      };
+      name: null,
+      desc: null,
+      buildingNo: null,
+      apartmentNo: null,
+      floor: null,
+      exp: null
+    };
 
     $scope.address = {
       name: null,
@@ -62,11 +62,13 @@ angular.module('getirApp')
       $timeout(() => {
         $scope.addAction = false;
         $scope.deleteAction = false;
+        $scope.address = {};
       }, 1000);
     });
 
     $rootScope.$on('cancel add address', () => {
       $scope.addAction = false;
       $scope.deleteAction = false;
+      $scope.address = {};
     });
   });
