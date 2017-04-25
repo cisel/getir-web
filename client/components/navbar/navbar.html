@@ -20,6 +20,7 @@
         <li class="visible-xs" ng-repeat="item in nav.menu" ng-class="{active: nav.isActive(item.link)}">
           <a href="{{item.link}}" class="nav-item-color">{{item.title}}</a>
         </li>
+        <li class="visible-xs" ng-hide="nav.isLoggedIn()" ng-class="{active: nav.isActive('/signup')}"><a href="/signup" class="nav-item-color">Kaydol</a></li>
         <li class="visible-xs" ng-hide="nav.isLoggedIn()" ng-class="{active: nav.isActive('/login')}"><a href="/login" class="nav-item-color">Giriş yap</a></li>
         <li class="visible-xs" ng-show="nav.isLoggedIn()"><a href="/logout" class="nav-item-color">Logout</a></li>
         <li class="hidden-xs" id="mf-navbar-user-menu">
@@ -32,6 +33,7 @@
             <li ng-repeat="item in nav.menu" ng-class="{active: nav.isActive(item.link)}">
               <a href="{{item.link}}" class="nav-item-color">{{item.title}}</a>
             </li>
+            <li ng-hide="nav.isLoggedIn()" ng-class="{active: nav.isActive('/signup')}"><a href="/signup" class="nav-item-color">Kaydol</a></li>
             <li ng-hide="nav.isLoggedIn()" ng-class="{active: nav.isActive('/login')}"><a href="/login" class="nav-item-color">Giriş yap</a></li>
             <li class="nav-item-color" ng-show="nav.isLoggedIn()"><a href="/logout" class="nav-item-color">Çıkış yap</a></li>
           </ul>

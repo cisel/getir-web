@@ -1,19 +1,19 @@
 <div class="container mt70">
   <div class="row">
-    <div class="col-sm-12 account-general">
-      <h1>Sign up</h1>
+    <div class="col-sm-4 col-sm-offset-4 account-general">
+      <h1>Kaydol</h1>
     </div>
-    <div class="col-sm-12">
+    <div class="col-sm-4 col-sm-offset-4">
       <form class="form account-form" name="form" ng-submit="vm.register(form)" novalidate>
 
         <div class="form-group" ng-class="{ 'has-success': form.name.$valid && vm.submitted,
                                             'has-error': form.name.$invalid && vm.submitted }">
-          <label>Name</label>
+          <label>Ad</label>
 
           <input type="text" name="name" class="form-control" ng-model="vm.user.name"
                  required/>
           <p class="help-block" ng-show="form.name.$error.required && vm.submitted">
-            A name is required
+            Ad gereklidir
           </p>
         </div>
 
@@ -25,10 +25,10 @@
                  required
                  mongoose-error/>
           <p class="help-block" ng-show="form.email.$error.email && vm.submitted">
-            Doesn't look like a valid email.
+            Geçerli bir email adresi gibi görünmüyor.
           </p>
           <p class="help-block" ng-show="form.email.$error.required && vm.submitted">
-            What's your email address?
+            Email adresiniz nedir?
           </p>
           <p class="help-block" ng-show="form.email.$error.mongoose">
             {{ vm.errors.email }}
@@ -37,15 +37,15 @@
 
         <div class="form-group" ng-class="{ 'has-success': form.password.$valid && vm.submitted,
                                             'has-error': form.password.$invalid && vm.submitted }">
-          <label>Password</label>
+          <label>Şifre</label>
 
           <input type="password" name="password" class="form-control" ng-model="vm.user.password"
-                 ng-minlength="3"
+                 ng-minlength="6"
                  required
                  mongoose-error/>
           <p class="help-block"
              ng-show="(form.password.$error.minlength || form.password.$error.required) && vm.submitted">
-            Password must be at least 3 characters.
+            Şifre en az 6 karakter olmalıdır.
           </p>
           <p class="help-block" ng-show="form.password.$error.mongoose">
             {{ vm.errors.password }}
@@ -54,31 +54,22 @@
 
         <div class="form-group" ng-class="{ 'has-success': form.confirmPassword.$valid && vm.submitted,
                                             'has-error': form.confirmPassword.$invalid && vm.submitted }">
-          <label>Confirm Password</label>
+          <label>Şifre (tekrar)</label>
           <input type="password" name="confirmPassword" class="form-control" ng-model="vm.user.confirmPassword"
                  match="vm.user.password"
-                 ng-minlength="3" required/>
+                 ng-minlength="6" required/>
           <p class="help-block"
              ng-show="form.confirmPassword.$error.match && vm.submitted">
-            Passwords must match.
+            Şifreler eşleşmiyor.
           </p>
         </div>
 
         <div class="mb20" style="min-height: 40px">
-          <button class="col-sm-6 col-xs-12 btn btn-inverse btn-lg btn-register account-btn" type="submit">
-            Sign up
-          </button>
-          <a class="col-sm-6 col-xs-12 btn btn-default btn-lg btn-login account-btn" href="/login">
-            Login
+          <button class="col-sm-6 col-xs-12 btn btn-inverse btn-lg btn-register account-btn" type="submit">Kaydol</button>
+          <a class="col-sm-6 col-xs-12 btn btn-link btn-lg" href="/login">
+            Giriş yap
           </a>
         </div><br>
-
-        <hr/>
-        <div class="row">
-          <div class="col-sm-4 col-md-3">
-            <oauth-buttons classes="btn-block"></oauth-buttons>
-          </div>
-        </div>
       </form>
     </div>
   </div>

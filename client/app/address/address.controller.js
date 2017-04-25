@@ -50,6 +50,7 @@ angular.module('getirApp')
       $scope.addAction = false;
       $scope.deleteAction = false;
       $scope.address = $scope.tempAddress;
+      $scope.addresses = Address.get();
     });
 
     $rootScope.$on('editAddress', (e, p) => {
