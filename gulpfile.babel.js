@@ -658,7 +658,7 @@ grunt.initConfig({
         },
         heroku: {
             options: {
-                remote: 'heroku',
+                remote: 'https://git.heroku.com/getirweb.git',
                 branch: 'master'
             }
         },
